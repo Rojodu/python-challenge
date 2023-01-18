@@ -39,3 +39,6 @@ with open(budgetPath, encoding = "utf-8") as budget:
 
 output = f"Financial Analysis\n\n----------------------------------\n\nTotalMonths: {monthCount}\n\nTotal: ${totalProfitLoss}\n\nAverage Change: ${avgChangesProfitLoss}\n\nGreatest Increase in Profits: {greatIncMonth} (${greatestIncrease})\n\nGreatest Decrease in Profits: {greatDecMonth} (${greatestDecrease})"
 print(output)
+
+with open('analysis/analysis.txt', 'w') as f:
+    f.write(output)
